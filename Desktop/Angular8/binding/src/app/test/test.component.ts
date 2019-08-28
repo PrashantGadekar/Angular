@@ -1,32 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-test',
   template: `
-            <input [(ngModel)]="name" type="text">
-            {{name}}
-
+         
+           <h2> {{name}}</h2>
+           <h2> {{name | lowercase}}</h2>
 
   `,
-  styles: [`
-          
-
-  `]
+  styles: []
 })
 export class TestComponent implements OnInit {
-  public name ="";
+  public name ="Codeevolution";
+  public message ="Welcome to Codeevolution";
+  public person={
+    "firstName":"John",
+    "lastName":"Doe"
+  }
+  
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClick(){
-    console.log("Welcome to home");
-    
-  }
-
-  logMessage(value){
-    console.log(value);
-  }
-
+  
 }
