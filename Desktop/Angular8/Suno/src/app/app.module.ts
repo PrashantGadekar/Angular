@@ -10,6 +10,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { SearchifyComponent } from './searchify/searchify.component';
 import { ArtinfoComponent } from './searchify/artinfo/artinfo.component';
 import { ArtDetailsComponent } from './art-details/art-details.component';
+import { FavouritesListComponent } from './favourites-list/favourites-list.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ArtDetailsComponent } from './art-details/art-details.component';
     SongComponent,
     SearchifyComponent,
     ArtinfoComponent,
-    ArtDetailsComponent
+    ArtDetailsComponent,
+    FavouritesListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

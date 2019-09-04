@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RapidService } from '../rapid.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-song',
@@ -9,7 +10,7 @@ import { RapidService } from '../rapid.service';
 export class SongComponent implements OnInit {
 
   public song1 =[];
-  constructor(private _rapidService : RapidService) { }
+  constructor(private _rapidService : RapidService,private router : Router) { }
 
   public str;
   getThem(value){
@@ -22,6 +23,10 @@ export class SongComponent implements OnInit {
   ngOnInit() {
      this._rapidService.getTopSongs()
                        .subscribe(data => {console.log(data); this.song1 = data;});
+  }
+
+  onSelect(artistname, trackname){
+    this.router.navigate(['/Info', artistname,trackname])
   }
 
 }

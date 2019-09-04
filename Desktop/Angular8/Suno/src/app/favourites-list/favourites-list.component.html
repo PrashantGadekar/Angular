@@ -1,0 +1,15 @@
+<h1 class="justify-content-center">Favourites</h1>
+<main class="d-flex flex-row flex-wrap bd-highlight mb-3 text-center ">
+<ul *ngFor ="let ob of obj" class="justify-content-center">
+        <li><img src={{ob.src}}></li>
+    <li>Artist:- {{ob.artist}}</li>
+    <li>Album :- {{ob.album}}</li>
+    
+    
+    <li><button (click)="remove_fav(ob.id)">Remove</button></li>
+    <li>Comments:- {{ob.comment}}</li>
+
+    <li><input type="text" #myComment></li>
+    <li><button (click)="logComment(myComment.value)" type="submit">Submit</button></li>
+</ul>
+</main>

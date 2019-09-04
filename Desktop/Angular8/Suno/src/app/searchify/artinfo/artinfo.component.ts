@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { RapidService } from 'src/app/rapid.service';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -10,15 +11,24 @@ import { RapidService } from 'src/app/rapid.service';
 export class ArtinfoComponent implements OnInit {
   
   public inf =[];
-  constructor(private _rapidService : RapidService ) { }
+  public artist_name;
+  public album_name;
+  constructor(private _rapidService : RapidService, private route : ActivatedRoute ) { }
 
   getBoth(value1,value2){
     console.log(value1,value2,"Inside the getThem function()");
-    this._rapidService.getArtInfo(value1,value2).subscribe((data)=> {console.log(data); this.inf=data;})
+  //  this._rapidService.getArtInfo(this.parentData,this.albumName).subscribe((data)=> {console.log(data); this.inf=data;})
   }
 
+  
   ngOnInit() {
-
+    let id = this.route.snapshot.paramMap.get('id');
+    let ids = this.route.snapshot.paramMap.get('ids');
+    console.log(id);
+    console.log(ids);
+    this.artist_name = id;
+    this.album_name = ids;
+    this._rapidService.getTrackInfo(id,ids).subscribe((data)=> {console.log(data); this.inf=data;})
   }
 
 }

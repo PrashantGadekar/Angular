@@ -1,5 +1,7 @@
 ul li{
     list-style: none;
+    padding-bottom: 10px;
+    
 }
 
 h1{
@@ -8,3 +10,8 @@ h1{
     margin-bottom: 10px;
 }
 
+button{
+    padding-bottom: 0px;
+    width: 180px;
+}
+ 

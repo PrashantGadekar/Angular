@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<!--
 <nav class="navbar navbar-expand-lg navbar-light bg-warning">
         <a class="navbar-brand" href="#">Suno</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#"routerLink="/Favs">My Favourite</a>
             </li>
         
           </ul>
@@ -22,19 +22,22 @@
           </form>
         </div>
       </nav>
-
-<h1>Top Songs</h1>
+    -->
+      <ul class="row">
+          <li><a routerLink="/homepage"> <h1 > Top Artists</h1></a></li> 
+          <li><a routerLink="/topsong"> <h1 > Top Songs</h1></a> </li>
+         </ul>
 
 
 <div class="d-flex flex-row flex-wrap bd-highlight mb-3">
         <ul *ngFor = "let sog of song1.tracks.track" >
             <li>
                 
-                <article>
+                <article class="card text-center container">
                     
-                 <!--  <img src='{{rap.image[2]["#text"]}}' alt="artist Image">-->
+                  <img src='{{sog.image[2]["#text"]}}' alt="artist Image">
                    <br> 
-                  <button> {{sog.name}}</button>
+                  <button class="text-wrap" (click)="onSelect(sog.artist.name,sog.name)"> {{sog.name}}</button>
                
                
                </article>

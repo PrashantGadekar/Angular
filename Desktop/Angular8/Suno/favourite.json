@@ -1,0 +1,34 @@
+{
+  "playlist": [
+    {
+      "artist": "Arijit Singh",
+      "album": "Best Of Arijit Singh",
+      "src": "https://lastfm-img2.akamaized.net/i/u/300x300/d7409c95e56c71bee2b6898f99a999b4.png",
+      "id": 6
+    },
+    {
+      "artist": "Sonu Nigam & Shreya Ghoshal",
+      "album": "3 Idiots",
+      "src": "https://lastfm-img2.akamaized.net/i/u/300x300/ec9106a3721e4bd197180a97e8a2adac.png",
+      "id": 7
+    },
+    {
+      "artist": "Vishal-Shekhar",
+      "album": "Om Shanti Om",
+      "src": "https://lastfm-img2.akamaized.net/i/u/300x300/1b20e974a7004b62b45fea4af9bd46f1.png",
+      "id": 8
+    },
+    {
+      "artist": "Sunidhi Chauhan & Labh Janjua",
+      "album": "Rab Ne Bana Di Jodi",
+      "src": "https://lastfm-img2.akamaized.net/i/u/300x300/d6fe4001a36644e8937621ea5c0d069a.png",
+      "id": 10
+    },
+    {
+      "artist": "Kavita Krishnamurthy",
+      "album": "Kuch Kuch Hota Hai",
+      "src": "https://lastfm-img2.akamaized.net/i/u/300x300/7452f339d39f15ee61c3a0e712346907.png",
+      "id": 11
+    }
+  ]
+}

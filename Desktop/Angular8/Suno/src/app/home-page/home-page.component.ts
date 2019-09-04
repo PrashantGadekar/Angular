@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RapidService } from '../rapid.service';
-
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { RapidService } from '../rapid.service';
 export class HomePageComponent implements OnInit {
 
   public rapid =[];
-  constructor(private _rapidService : RapidService) { }
+  constructor(private _rapidService : RapidService, private router : Router) { }
 
   public str =[];
   getThem(value){
@@ -24,4 +24,9 @@ export class HomePageComponent implements OnInit {
     this._rapidService.getRapid()
                       .subscribe((data) => {console.log(data);this.rapid = data;});
  }
+  
+ onSelect(department){
+  this.router.navigate(['/Info', department])
+}
+
 }

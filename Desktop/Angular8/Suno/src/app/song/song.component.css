@@ -6,4 +6,9 @@ h1{
 
 ul li{
     list-style: none;
+    padding-bottom: 10px;
+}
+button{
+    margin-bottom: 10px;
+    width: 180px;
 }
